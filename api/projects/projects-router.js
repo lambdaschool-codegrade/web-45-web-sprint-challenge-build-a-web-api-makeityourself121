@@ -57,8 +57,16 @@ router.delete('/:id', validateUserId, (req, res, next) => {
     })
 })
 
-router.get('/:id/actions', (req, res) => {})
-
+router.get('/:id/actions', validateUserId, (req, res, next) => {
+  Projects.getProjectActions(req.params.id)
+    .then((project) => {
+      res.status(200).json(project)
+    })
+    .catch((err) => {
+      next(err)
+    })
+})
+//eslint-disable-next-line
 router.use((err, req, res, next) => {
   res.status(err.status || 500).json({
     customMessage: 'something is wrong with the server',

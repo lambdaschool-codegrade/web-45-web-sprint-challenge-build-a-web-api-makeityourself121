@@ -147,7 +147,21 @@ We have provided test data for all the resources.
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+
+   It can be used to design single-page, multi-page and hybrid web  applications. It allows to setup middlewares to respond to HTTP  Requests. It defines a routing table which is used to perform different actions based on HTTP method and URL.
+
 1. Understand and explain the use of Middleware.
+
+   middleware enables communication and data management for distributed applications.
+
 1. The basic principles of the REST architectural style.
+
+   REST provides a uniform interface between components. This simplifies the architecture, as all components follow the same rules to speak to one another.
+
 1. Understand and explain the use of Express Routers.
+
+   The express. Router() function is used to create a new router object.
+
 1. Describe tooling used to manually test the correctness of an API.
+
+  Postman, HTTPie, browser 

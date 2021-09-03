@@ -1,4 +1,3 @@
-// Write your "projects" router here
 const express = require('express')
 const router = express.Router()
 const Projects = require('./projects-model')
@@ -7,6 +6,7 @@ const {
   validatePost,
   validatePostCompleted,
 } = require('./projects-middleware')
+
 router.get('/', (req, res, next) => {
   Projects.get(req.params.id)
     .then((project) => {
@@ -66,6 +66,7 @@ router.get('/:id/actions', validateUserId, (req, res, next) => {
       next(err)
     })
 })
+
 //eslint-disable-next-line
 router.use((err, req, res, next) => {
   res.status(err.status || 500).json({
